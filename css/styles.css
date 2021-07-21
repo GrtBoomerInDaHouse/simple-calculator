@@ -1,0 +1,350 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Cairo', sans-serif;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  background:  linear-gradient(
+    180deg,
+    hsla(298, 71%, 70%, 0.945),
+    hsl(145, 55%, 75%) 80%
+  );
+  margin-top: 20px;
+  border-top: 1px solid rgb(109, 107, 107);
+  
+}
+
+.calculator {
+  width: 300px;
+
+  min-height: 500px;
+  background: rgb(255, 255, 255);
+  border: 1px solid hsl(0, 0%, 0%);
+  box-shadow: 1px 1px 10px black;
+  border-radius: 15px;
+  padding: 15px 15px 0 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 50px;
+}
+
+
+
+.header{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  height: 200px;
+  background:  linear-gradient(
+    180deg,
+    hsla(207, 71%, 70%, 0.945),
+    hsl(244, 59%, 72%) 80%
+  );
+  border-bottom: 1px solid rgb(92, 91, 91);
+}
+
+.header>h1{
+  font-family: 'Roboto Slab', serif;
+  font-size: 70px;
+  max-width: 100%;
+  color:white;
+  text-shadow: 1px 1px 1px black;
+}
+
+.footer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  width: 100%;
+  background:  linear-gradient(
+    180deg,
+    hsla(207, 71%, 70%, 0.945),
+    hsl(244, 59%, 72%) 80%
+  );
+  color:white;
+  margin-top: 20px;
+}
+
+
+.footer>p{
+  font-family: 'Pacifico', cursive;
+  padding: 0 10px;
+  font-size: 20px;
+  
+ 
+}
+
+
+
+
+
+
+/* ---------------------DISPLAY--------------------- */
+
+.display {
+  width: 90%;
+  height: 20%;
+  border: 1px solid rgb(95, 92, 92);
+  border-radius: 2%;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0px 0px 1px rgb(85, 83, 83);
+}
+
+.display-result {
+  background: hsla(120, 2%, 63%, 0.644);
+  color: hsl(0, 80%, 52%);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  overflow: hidden;
+  max-height: 100%;
+  
+}
+
+.display-result>h1{
+  max-height: 50px;
+}
+
+.display-input {
+  background: hsla(120, 2%, 63%, 0.644);
+  color:  rgb(255, 255, 255);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  overflow: hidden;
+  max-height: 100%;
+}
+
+h1 {
+  overflow-wrap: break-word;
+  
+  max-width: 240px;
+}
+
+.h1-output,
+.h1-input {
+  padding: 0px 20px 5px 10px;
+  text-shadow: 0px 1px 1px rgb(20, 20, 20);
+  font-size: 28px;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ----------------------MAIN(BUTTONS)--------------------------- */
+
+.buttons-panel {
+  width: 100%;
+  height: 60%;
+  display: flex;
+}
+
+.col-1,
+.col-2,
+.col-3,
+.col-4 {
+  height: 100%;
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  margin: 0 10px 0 5px;
+}
+
+button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 20%;
+  margin: 10px 0;
+  background: linear-gradient(hsla(61, 49%, 70%, 0.986) 50%, hsl(0, 8%, 63%));
+  border-radius: 15px;
+  box-shadow: 0px 1px 1px hsl(0, 0%, 0%);
+  border: 2px solid rgb(187, 184, 184);
+}
+
+
+
+
+
+
+
+
+
+
+
+/* ----------DIGITS---------- */
+
+.digit,
+.dot,
+.r {
+  background: linear-gradient(120deg, hsl(0, 6%, 84%) 90%, rgb(255, 254, 254));
+  font-size: 18px;
+  border: 1px solid rgb(161, 159, 159);
+  max-width: 75px;
+}
+
+.digit:active,
+.dot:active, .r:active
+ {
+  border: 1px solid transparent;
+  font-size: 16px;
+  box-shadow: 0px 0px 0px hsl(0, 32%, 31%);
+}
+
+.r:hover{
+
+  
+  font-size: 16px;
+  color:white;
+  background:  linear-gradient(
+    180deg,
+    hsla(207, 71%, 70%, 0.945),
+    hsl(244, 59%, 72%) 80%
+  );
+
+}
+
+
+
+/* --------OPERATORS---------- */
+
+.plus,
+.minus {
+  max-height: 40px;
+  border-radius: 5px;
+  border: 1px solid rgb(151, 149, 149);
+}
+
+.plus:active,
+.minus:active {
+  border: 1px solid transparent;
+  scale: 0.98;
+  box-shadow: 0px 0px 0px hsl(0, 3%, 47%);
+}
+
+.col-4 > .minus {
+  font-size: 30px;
+  margin-bottom: 15px;
+  background: linear-gradient(
+    180deg,
+    hsla(207, 71%, 70%, 0.945),
+    hsl(244, 59%, 72%) 80%
+  );
+  color: white;
+}
+
+.col-4 > .plus {
+  margin: 0;
+  font-size: 23px;
+  background: linear-gradient(
+    180deg,
+    hsla(207, 71%, 70%, 0.945),
+    hsl(244, 59%, 72%) 80%
+  );
+  color: white;
+}
+
+.equal {
+  flex-grow: 1;
+  font-size: 30px;
+  border-radius: 3px;
+  border: 2px solid transparent;
+  background: linear-gradient(
+    180deg,
+    hsl(9, 88%, 34%) 30%,
+    hsl(0, 58%, 47%) 80%
+  );
+  color: white;
+ 
+}
+
+.equal:active {
+  scale: 0.98;
+  font-size: 28px;
+  box-shadow: 0px 1px 1px black;
+  border: 1px solid rgba(137, 164, 221, 0.466);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ----FIRST-ROW-BUTTONS---- */
+
+.clear,
+.delete {
+  background: linear-gradient(hsl(17, 97%, 31%) 50%, hsl(0, 65%, 47%));
+  color: white;
+  font-size: 14px;
+  border-radius: 20px;
+  height: 10%;
+  padding: 18px;
+  border: 1px solid hsla(0, 3%, 72%, 0.733);
+}
+
+.clear:active,
+.delete:active {
+  border: 1px solid hsla(0, 1%, 47%, 0.733);
+  scale: 0.95;
+}
+
+.x,
+.devide {
+  background: linear-gradient(
+    180deg,
+    hsla(207, 71%, 70%, 0.945),
+    hsl(244, 59%, 72%) 80%
+  );
+  color: white;
+  border-radius: 5px;
+  font-size: 18px;
+  height: 10%;
+  border:2px solid hsla(0, 2%, 66%, 0.733);
+  padding: 18px;
+}
+
+.x:active,
+.devide:active {
+  border: 2px solid transparent;
+  scale: 0.98;
+  box-shadow: 0px 0px 0px hsl(0, 3%, 47%);
+}
+
+
